@@ -1,0 +1,81 @@
+import java.util.Scanner;
+
+public class Welcome {
+
+	public static void main(String[] args) {
+		// System.out.println("Welcome to Shopping Mall");
+		// System.out.println("Welcome to Book Market!");
+		
+		// 사용자의 정보(이름과 연락처)를 입력받고 저장
+		Scanner input = new Scanner(System.in);
+		
+		// 이름은 문자열로, 연락처는 정수로 입력받기
+		System.out.print("당신의 이름을 입력하세요 : ");
+		String userName = input.next();
+				
+		System.out.print("연락처를 입력하세요 : ");
+		int userMobile = input.nextInt();
+		
+		// 변수를 이용하여 인사말 출력하기
+		// 인사말을 문자열 변수에 새롭게 저장하고 출력
+		String greeting = "Welcom to Shopping Mall";
+		String tagline = "Welcome to Book Market!";
+		
+		System.out.println("******************************************************");
+		System.out.println("\t" + greeting);
+		System.out.println("\t" + tagline);
+		System.out.println("******************************************************");
+		
+		// 메인 메뉴 항목 만들기
+		System.out.println(" 1. 고객 정보 확인하기 \t4. 바구니에 항목 추가하기");
+		System.out.println(" 2. 장바구니 상품 목록 보기 \t5. 장바구니의 항목 수량 줄이기");
+		System.out.println(" 3. 장바구니 비우기 \t6. 장바구니의 항목 삭제하기");
+		System.out.println(" 7. 영수증 표시하기 \t8. 종료");
+		System.out.println("******************************************************");
+		
+		// 메인 메뉴 선택하기
+		// 온라인 서점의 메인 메뉴를 만들어 사용자 입력 처리를 통해 메뉴 선택
+		// 메뉴 번호 입력받고 출력하기
+		System.out.print("메뉴 번호를 선택해주세요 : ");
+		int num = input.nextInt();
+		// System.out.println(num + "번을 선택했습니다.");
+		
+		// 메뉴 정보 표시 및 종료하기
+		// 제어문을 이용하여 선택 가능한 메뉴 정보를 출력
+		// 반복문을 이용하여 종료 메뉴를 선택하기 전까지 메뉴 지속적으로 선택 가능
+		if (num < 1 || num > 8) {
+			System.out.println("1부터 8까지의 숫자를 입력하세요.");
+		} else {
+			switch(num) {
+			case 1:
+				System.out.println("현재 고객 정보 : ");
+				break;
+			case 2:
+				System.out.println("장바구니 상품 목록 보기 : ");
+				break;
+			case 3:
+				System.out.println("장바구니 비우기");
+				break;
+			case 4:
+				System.out.println("장바구니에 항목 추가하기 : ");
+				break;
+			case 5:
+				System.out.println("5. 장바구니의 항목 수량 줄이기");
+				break;
+			case 6:
+				System.out.println("6. 장바구니의 항목 삭제하기");
+				break;
+			case 7:
+				System.out.println("7. 영수증 표시하기");
+				break;
+			case 8:
+				System.out.println("8. 종료");
+				break;
+			}
+		}
+		
+		//
+		
+	}
+
+}
